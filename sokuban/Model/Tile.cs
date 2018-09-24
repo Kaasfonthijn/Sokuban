@@ -8,5 +8,13 @@ namespace sokuban
 {
     class Tile : Field
     {
+        public bool hasChest
+        {
+            get
+            {
+                return false;
+            }
+            set { hasChest = value; }
+        }
     }
 }

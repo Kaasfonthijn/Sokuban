@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace sokuban
+namespace sokuban.View
 {
-    class Chest : Field
+    class VictoryView
     {
-     
     }
 }

@@ -3,7 +3,7 @@
   <Class Name="sokuban.Field">
     <Position X="6.25" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAACAABAAAAAAAAAAAAIAAAACAAAAgAAgAA=</HashCode>
       <FileName>Field.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -11,14 +11,14 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="sokuban.Tile">
-    <Position X="7.25" Y="4.25" Width="1.5" />
+    <Position X="7.25" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
       <FileName>Tile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="sokuban.Wall">
-    <Position X="5.25" Y="4.25" Width="1.5" />
+    <Position X="5.25" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Wall.cs</FileName>

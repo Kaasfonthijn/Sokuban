@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace sokuban
+namespace sokuban.Model
 {
-    class Parser
+    class Chest : Field
     {
+     
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace sokuban.View
+namespace sokuban.Model
 {
-    public class VictoryView
+    class Floor
     {
     }
 }

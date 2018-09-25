@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace sokuban.Model
 {
-    class TileList
+    public class TileList
     {
+        public Tile First { get; set; }
+        public Tile Current { get; set; }
     }
 }

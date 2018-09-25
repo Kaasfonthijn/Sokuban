@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace sokuban.View
 {
-    class MenuView
+    public class MenuView
     { 
         public void ShowStart()
         {

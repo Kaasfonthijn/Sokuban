@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace sokuban.Model
 {
-    class Chest : Field
+    class Chest
     {
      
     }

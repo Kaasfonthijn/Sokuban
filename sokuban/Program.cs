@@ -10,6 +10,8 @@ namespace sokuban
     {
         static void Main(string[] args)
         {
+            Game game = new sokuban.Game();
+            Console.ReadLine();
         }
     }
 }

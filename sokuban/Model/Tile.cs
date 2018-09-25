@@ -4,17 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace sokuban
+namespace sokuban.Model
 {
-    class Tile : Field
+    public abstract class Tile
     {
-        public bool hasChest
-        {
-            get
-            {
-                return false;
-            }
-            set { hasChest = value; }
-        }
+        public MoveableObject MoveableObject { get; set; }
+
+        public Tile Up { get; set; }
+        public Tile Right { get; set; }
+        public Tile Down { get; set; }
+        public Tile Left { get; set; }
+
+        public abstract bool MoveTo(MoveableObject moveableObject);
+
+        public abstract void Show();
     }
 }

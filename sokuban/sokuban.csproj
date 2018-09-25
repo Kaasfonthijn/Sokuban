@@ -43,19 +43,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Chest.cs" />
-    <Compile Include="Tile.cs" />
-    <Compile Include="Field.cs" />
-    <Compile Include="Game.cs" />
-    <Compile Include="Parser.cs" />
+    <Compile Include="Model\Chest.cs" />
+    <Compile Include="Model\GameField.cs" />
+    <Compile Include="Model\MoveableObject.cs" />
+    <Compile Include="Model\Tile.cs" />
+    <Compile Include="Controller\Game.cs" />
+    <Compile Include="Model\TileList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Truck.cs" />
-    <Compile Include="Wall.cs" />
+    <Compile Include="Model\Truck.cs" />
+    <Compile Include="Model\Wall.cs" />
+    <Compile Include="View\GamefieldView.cs" />
+    <Compile Include="View\MenuView.cs" />
+    <Compile Include="View\VictoryView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Sokuban.cd" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Levels\doolhof1.txt" />
+    <Content Include="Levels\doolhof2.txt" />
+    <Content Include="Levels\doolhof3.txt" />
+    <Content Include="Levels\doolhof4.txt" />
+    <Content Include="Levels\doolhof5.txt" />
+    <Content Include="Levels\doolhof6.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

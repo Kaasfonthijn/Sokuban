@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace sokuban.Model
 {
-    public class Chest : MoveableObject
+    class Empty : Tile
     {
-        public Chest(Tile currentTile) : base(currentTile)
+        public override bool MoveTo(MoveableObject moveableObject)
         {
+            return false;
         }
 
         public override void Show()
         {
-            Console.Write("@");
+            Console.Write(" ");
         }
     }
 }

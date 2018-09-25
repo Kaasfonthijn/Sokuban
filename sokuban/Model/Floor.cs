@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace sokuban.Model
 {
-    class Floor
+    class Floor : Tile
     {
+        public override bool MoveTo(MoveableObject moveableObject)
+        {
+            return true;
+        }
+
+        public override void Show()
+        {
+            Console.Write(".");
+        }
     }
 }

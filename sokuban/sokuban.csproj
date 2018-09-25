@@ -44,6 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Chest.cs" />
+    <Compile Include="Model\Destination.cs" />
+    <Compile Include="Model\Empty.cs" />
+    <Compile Include="Model\Floor.cs" />
     <Compile Include="Model\GameField.cs" />
     <Compile Include="Model\MoveableObject.cs" />
     <Compile Include="Model\Tile.cs" />

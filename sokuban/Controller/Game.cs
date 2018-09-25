@@ -16,7 +16,6 @@ namespace sokuban
         public VictoryView _victoryView;
 
         private bool isPlaying = true;
-        private int _labirinthNumber;
         private GameField _gameField;
         public Game()
         {
@@ -36,14 +35,15 @@ namespace sokuban
             _menuView.ShowStart();
             AskLevel();
             _gamefieldView.showPlayField();
+            Console.ReadLine();
             //AskDirections();
             //ShowVictory();
         }
         public void AskLevel()
         {
-            bool canRead = false;
+            bool loadGame = false;
 
-            while (!canRead)
+            while (!loadGame)
             {
                 Console.WriteLine(">     Kies een doolhof (1 - 6), s = stop");
                 char input = Console.ReadKey().KeyChar;
@@ -53,43 +53,37 @@ namespace sokuban
                     case 's':
                         Console.Clear();
                         EndApplicationGame();
-                        canRead = true;
+                        loadGame = true;
                         break;
-                    case '1':
-                        _labirinthNumber = 1;
+                    case '1':   
                         Console.Clear();
-                        LoadGame(_labirinthNumber);
-                        canRead = true;
+                        LoadGame(1);
+                        loadGame = true;
                         break;
                     case '2':
-                        _labirinthNumber = 2;
                         Console.Clear();
-                        LoadGame(_labirinthNumber);
-                        canRead = true;
+                        LoadGame(2);
+                        loadGame = true;
                         break;
                     case '3':
-                        _labirinthNumber = 3;
                         Console.Clear();
-                        LoadGame(_labirinthNumber);
-                        canRead = true;
+                        LoadGame(3);
+                        loadGame = true;
                         break;
                     case '4':
-                        _labirinthNumber = 4;
                         Console.Clear();
-                        LoadGame(_labirinthNumber);
-                        canRead = true;
+                        LoadGame(4);
+                        loadGame = true;
                         break;
                     case '5':
-                        _labirinthNumber = 5;
                         Console.Clear();
-                        LoadGame(_labirinthNumber);
-                        canRead = true;
+                        LoadGame(5);
+                        loadGame = true;
                         break;
                     case '6':
-                        _labirinthNumber = 6;
                         Console.Clear();
-                        LoadGame(_labirinthNumber);
-                        canRead = true;
+                        LoadGame(6);
+                        loadGame = true;
                         break;
                     default:
                         Console.WriteLine("\n?");
@@ -104,6 +98,11 @@ namespace sokuban
         public void EndApplicationGame()
         {
             System.Environment.Exit(1);
+        }
+        public void DisplayGameField()
+        {
+//            _playfield.ClearPlayField();
+//            _gameField.showPlayField();
         }
     }
 }

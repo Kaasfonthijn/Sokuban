@@ -22,7 +22,7 @@ namespace sokuban.View
             Console.WriteLine("└──────────┘");
             Console.WriteLine("─────────────────────────────────────────────────────────────────────────");
             // draw playfield on canvas
-//            game.ShowPlayField();
+            game.DisplayGameField();
         }
     }
 }

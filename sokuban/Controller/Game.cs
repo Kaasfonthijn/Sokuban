@@ -22,24 +22,24 @@ namespace sokuban
             while (true)
             {
                 isPlaying = true;
-                StartGame();
+                startGame();
             }
         }
 
-        public void StartGame()
+        public void startGame()
         {
             _menuView = new MenuView();
             _gamefieldView = new GamefieldView(this);
 
 
             _menuView.ShowStart();
-            AskLevel();
+            getLevel();
             _gamefieldView.showPlayField();
             Console.ReadLine();
             //AskDirections();
             //ShowVictory();
         }
-        public void AskLevel()
+        public void getLevel()
         {
             bool loadGame = false;
 
@@ -52,7 +52,7 @@ namespace sokuban
                 {
                     case 's':
                         Console.Clear();
-                        EndApplicationGame();
+                        endApplication();
                         loadGame = true;
                         break;
                     case '1':   
@@ -95,14 +95,14 @@ namespace sokuban
         {
            _gameField = new GameField(level);
         }
-        public void EndApplicationGame()
+        public void endApplication()
         {
             System.Environment.Exit(1);
         }
-        public void DisplayGameField()
+        public void displayPlayfield()
         {
-//            _playfield.ClearPlayField();
-//            _gameField.showPlayField();
+            _gameField.clearPlayfield();
+            _gameField.showPlayfield();
         }
     }
 }

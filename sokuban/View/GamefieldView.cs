@@ -20,9 +20,9 @@ namespace sokuban.View
             Console.WriteLine("┌──────────┐");
             Console.WriteLine("| Sokoban  |");
             Console.WriteLine("└──────────┘");
-            Console.WriteLine("─────────────────────────────────────────────────────────────────────────");
-            // draw playfield on canvas
-            game.DisplayGameField();
+            Console.WriteLine("──────────────────────────────────────────────────────────────────");
+      
+            game.displayPlayfield();
         }
     }
 }

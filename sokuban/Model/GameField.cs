@@ -125,5 +125,47 @@ namespace sokuban.Model
 
 
         }
+
+        public void showPlayfield()
+        {
+            bool isNotLastLine = true;
+            int lineCounter = 1;
+            Tile currentTile = map.First;
+
+            while (isNotLastLine)
+            {
+                while (currentTile != null)
+                {
+                    currentTile.Show();
+                    currentTile = currentTile.Right;
+                }
+
+                lineCounter++;
+
+                currentTile = map.First;
+                for (int i = 1; i < lineCounter; i++)
+                {
+                    currentTile = currentTile.Down;
+                }
+
+                if (currentTile.Down == null)
+                {
+                    isNotLastLine = false;
+                }
+                Console.WriteLine();
+            }
+
+            while (currentTile != null)
+            {
+                currentTile.Show();
+                currentTile = currentTile.Right;
+            }
+            Console.WriteLine();
+        }
+
+        public void clearPlayfield()
+        {
+            Console.Clear();
+        }
     }
 }

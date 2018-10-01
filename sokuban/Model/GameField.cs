@@ -16,10 +16,10 @@ namespace sokuban.Model
 
         public GameField(int level){
             map = new TileList();
-            loadMap(level);
+            LoadMap(level);
         }
 
-        public void loadMap(int level)
+        public void LoadMap(int level)
         {
             string[] allLines;
             string startupPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
@@ -48,32 +48,26 @@ namespace sokuban.Model
                     Tile newTile;
                     switch (c)
                     {
-                       
+
                         case '#':
-                            // muur
                             newTile = new Wall();
                             break;
                         case '.':
-                            // vloer
                             newTile = new Floor();
                             break;
                         case 'o':
-                            // krat
                             newTile = new Floor();
                             newTile.MoveableObject = new Chest(newTile);
                             break;
                         case 'x':
-                            // bestemming
                             newTile = new Destination();
                             break;
                         case '@':
-                            // truck
                             newTile = new Floor();
                             Truck = new Truck(newTile);
                             newTile.MoveableObject = Truck;
                             break;
                         default:
-                            // Empty aanmaken
                             newTile = new Empty();
                             break;
                     }
@@ -126,7 +120,7 @@ namespace sokuban.Model
 
         }
 
-        public void showPlayfield()
+        public void ShowPlayfield()
         {
             bool isNotLastLine = true;
             int lineCounter = 1;
@@ -163,7 +157,7 @@ namespace sokuban.Model
             Console.WriteLine();
         }
 
-        public void clearPlayfield()
+        public void ClearPlayfield()
         {
             Console.Clear();
         }

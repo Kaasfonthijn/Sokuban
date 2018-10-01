@@ -8,14 +8,20 @@ namespace sokuban.Model
 {
     class Destination: Floor
     {
-        public override bool MoveTo(MoveableObject moveableObject)
-        {
-            throw new NotImplementedException();
-        }
 
         public override void Show()
         {
-            Console.Write("0");
+            if (this.MoveableObject != null)
+            {
+                MoveableObject.Show();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write("x");
+                Console.ResetColor();
+            }
+            
         }
     }
 }

@@ -16,7 +16,7 @@ namespace sokuban.Model
 
         public override void Show()
         {
-            Console.Write("#");
+            Console.Write("█");
         }
     }
 }

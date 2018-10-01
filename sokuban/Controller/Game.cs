@@ -22,24 +22,23 @@ namespace sokuban
             while (true)
             {
                 isPlaying = true;
-                startGame();
+                StartGame();
             }
         }
 
-        public void startGame()
+        public void StartGame()
         {
             _menuView = new MenuView();
             _gamefieldView = new GamefieldView(this);
 
 
             _menuView.ShowStart();
-            getLevel();
+            GetLevel();
             _gamefieldView.showPlayField();
-            Console.ReadLine();
-            //AskDirections();
+            GetDirection();
             //ShowVictory();
         }
-        public void getLevel()
+        public void GetLevel()
         {
             bool loadGame = false;
 
@@ -52,7 +51,7 @@ namespace sokuban
                 {
                     case 's':
                         Console.Clear();
-                        endApplication();
+                        EndApplication();
                         loadGame = true;
                         break;
                     case '1':   
@@ -91,18 +90,58 @@ namespace sokuban
                 }
             }
         }
+
+        public void GetDirection()
+        {
+            while (isPlaying)
+            {
+
+                bool canRead = false;
+                while (!canRead)
+                {
+                    Console.WriteLine("─────────────────────────────────────────────────────────────────────────");
+                    Console.WriteLine(">     Gebruik pijljestoetsen (s = stop, r = reset)");
+
+                    var input = Console.ReadKey(false).Key;
+                    switch (input)
+                    {
+                        case ConsoleKey.UpArrow:
+                            _gameField.Truck.Move("up");
+                            break;
+                        case ConsoleKey.RightArrow:
+                            _gameField.Truck.Move("right");
+                            break;
+                        case ConsoleKey.DownArrow:
+                            _gameField.Truck.Move("down");
+                            break;
+                        case ConsoleKey.LeftArrow:
+                            _gameField.Truck.Move("left");
+                            break;
+                    }
+                    displayPlayfield();
+
+//                    if (checkIfWon())
+//                    {
+//                        break;
+//                    }
+
+                    canRead = false;
+                }
+            }
+        }
+
         public void LoadGame(int level)
         {
            _gameField = new GameField(level);
         }
-        public void endApplication()
+        public void EndApplication()
         {
             System.Environment.Exit(1);
         }
         public void displayPlayfield()
         {
-            _gameField.clearPlayfield();
-            _gameField.showPlayfield();
+            _gameField.ClearPlayfield();
+            _gameField.ShowPlayfield();
         }
     }
 }

@@ -10,11 +10,24 @@ namespace sokuban.Model
     {
         public Chest(Tile currentTile) : base(currentTile)
         {
+            CanMoveOtherObject = false;
         }
 
         public override void Show()
         {
-            Console.Write("@");
+            if (this.Tile is Destination)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                Console.Write("0");
+                Console.ResetColor();
+             
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.Write("o");
+                Console.ResetColor();
+            }
         }
     }
 }

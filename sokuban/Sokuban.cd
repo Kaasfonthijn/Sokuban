@@ -14,8 +14,8 @@
       <FileName>Model\Wall.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="sokuban.Model.Truck" Collapsed="true">
-    <Position X="16" Y="4.75" Width="1.5" />
+  <Class Name="sokuban.Model.Truck">
+    <Position X="16" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Truck.cs</FileName>
@@ -78,8 +78,8 @@
       <Property Name="Tile" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="sokuban.Model.Chest" Collapsed="true">
-    <Position X="16" Y="3.5" Width="1.5" />
+  <Class Name="sokuban.Model.Chest">
+    <Position X="16" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Chest.cs</FileName>

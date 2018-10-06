@@ -13,9 +13,12 @@ namespace sokuban.Model
     {
         public TileList map;
         public Truck Truck { get; set; }
+        
+        public List<MoveableObject> BoxTiles;
 
         public GameField(int level){
             map = new TileList();
+            BoxTiles = new List<MoveableObject>();
             LoadMap(level);
         }
 
@@ -58,6 +61,7 @@ namespace sokuban.Model
                         case 'o':
                             newTile = new Floor();
                             newTile.MoveableObject = new Chest(newTile);
+                            BoxTiles.Add(newTile.MoveableObject);
                             break;
                         case 'x':
                             newTile = new Destination();
@@ -155,6 +159,27 @@ namespace sokuban.Model
                 currentTile = currentTile.Right;
             }
             Console.WriteLine();
+        }
+
+        public bool GameEnd()
+        {
+            int Destinations = 0;
+            int DestinationsOccupied = 0;
+            foreach (MoveableObject BoxTile in BoxTiles)
+            {
+                Destinations++;
+                if (BoxTile.Tile.GetType() == typeof(Destination))
+                {
+
+                    DestinationsOccupied++;
+                    if (DestinationsOccupied == Destinations)
+                    {
+                        return true;
+                    }
+                }
+            }
+            
+            return false;
         }
 
         public void ClearPlayfield()

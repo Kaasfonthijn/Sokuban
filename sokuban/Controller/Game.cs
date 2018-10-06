@@ -36,7 +36,7 @@ namespace sokuban
             GetLevel();
             _gamefieldView.showPlayField();
             GetDirection();
-            //ShowVictory();
+            ShowVictory();
         }
         public void GetLevel()
         {
@@ -120,15 +120,31 @@ namespace sokuban
                     }
                     displayPlayfield();
 
-//                    if (checkIfWon())
-//                    {
-//                        break;
-//                    }
+                    if (GameEnd())
+                    {
+                        break;
+                    }
 
                     canRead = false;
                 }
             }
         }
+
+        public bool GameEnd()
+        {
+            if (_gameField.GameEnd())
+            {
+                isPlaying = false;
+            }
+
+            return _gameField.GameEnd();
+        }
+
+        public void ShowVictory() {
+            _victoryView = new VictoryView();
+            _victoryView.showVictory();
+        }
+
 
         public void LoadGame(int level)
         {

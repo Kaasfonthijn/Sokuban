@@ -21,27 +21,26 @@ namespace sokuban.Model
             }
         }
 
-        public override bool MoveTo(MoveableObject requestObject)
+        public override bool MoveTo(MoveableObject moveableObject)
         {
-            if (this.MoveableObject != null)
+            if (MoveableObject != null)
             {
-                // if there is another object on the requested tile
                 bool result;
                 Tile tempTile;
 
-                if (requestObject.Tile == Down)
+                if (moveableObject.Tile == Down)
                 {
                     tempTile = Up;
                 }
-                else if (requestObject.Tile == Left)
+                else if (moveableObject.Tile == Left)
                 {
                     tempTile = Right;
                 }
-                else if (requestObject.Tile == Up)
+                else if (moveableObject.Tile == Up)
                 {
                     tempTile = Down;
                 }
-                else if (requestObject.Tile == Right)
+                else if (moveableObject.Tile == Right)
                 {
                     tempTile = Left;
                 }
@@ -61,17 +60,12 @@ namespace sokuban.Model
 
                 if (!result) { return false; }
             }
-
-            // When requestObject should be placed
-
-            // Remove old object
-            requestObject.Tile.MoveableObject = null;
-
-            // Set requestObject on current tile
-            this.MoveableObject = requestObject;
-
-            // Set requestObject tile on current tile
-            requestObject.Tile = this;
+            
+            moveableObject.Tile.MoveableObject = null;
+            
+            this.MoveableObject = moveableObject;
+            
+            moveableObject.Tile = this;
 
             return true;
         }

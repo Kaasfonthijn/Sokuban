@@ -67,6 +67,9 @@ namespace sokuban.Model
                         case 'x':
                             newTile = new Destination();
                             break;
+                        case '~':
+                            newTile = new Trap();
+                            break;
                         case '@':
                             newTile = new Floor();
                             Truck = new Truck(newTile);

@@ -113,7 +113,7 @@ namespace sokuban
 
                     if (_gameField.Worker != null)
                     {
-                    _gameField.Worker.FallAsleep();
+                        _gameField.Worker.FallAsleep();
                     }
 
                     switch (input)

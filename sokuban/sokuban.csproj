@@ -52,6 +52,7 @@
     <Compile Include="Model\Tile.cs" />
     <Compile Include="Controller\Game.cs" />
     <Compile Include="Model\TileList.cs" />
+    <Compile Include="Model\Trap.cs" />
     <Compile Include="Model\Worker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

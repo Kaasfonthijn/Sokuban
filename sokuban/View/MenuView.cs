@@ -17,12 +17,14 @@ namespace sokuban.View
             Console.WriteLine("|     Betekenis van de symbolen.   |   doel van het spel     |");
             Console.WriteLine("|                                  |                         |");
             Console.WriteLine("|     spatie : outerspace          |   duw met de tuck       |");
-            Console.WriteLine("|          # : muur                |   de krat(ten)          |");
-            Console.WriteLine("|          . : vloer               |   naar de bestemming    |");
-            Console.WriteLine("|          o : krat                |                         |");
-            Console.WriteLine("|          0 : krat op bestemming  |                         |");
-            Console.WriteLine("|          x : bestemming          |                         |");
+            Console.WriteLine("|          # : wall                |   de krat(ten)          |");
+            Console.WriteLine("|          . : floor               |   naar de bestemming    |");
+            Console.WriteLine("|          o : Chest               |                         |");
+            Console.WriteLine("|          0 : Chest on destination|                         |");
+            Console.WriteLine("|          x : Destination         |                         |");
             Console.WriteLine("|          @ : truck               |                         |");
+            Console.WriteLine("|          $ : Worker              |                         |");
+            Console.WriteLine("|          ~ : trap                |                         |");
             Console.WriteLine("|____________________________________________________________|");
             Console.WriteLine();
         }

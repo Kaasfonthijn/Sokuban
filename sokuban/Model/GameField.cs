@@ -13,7 +13,8 @@ namespace sokuban.Model
     {
         public TileList map;
         public Truck Truck { get; set; }
-        
+        public Worker Worker { get; set; }
+
         public List<MoveableObject> BoxTiles;
 
         public GameField(int level){
@@ -71,6 +72,11 @@ namespace sokuban.Model
                             Truck = new Truck(newTile);
                             newTile.MoveableObject = Truck;
                             break;
+                        case '$':
+                            newTile = new Floor();
+                            Worker = new Worker(newTile);
+                            newTile.MoveableObject = Worker;
+                            break;
                         default:
                             newTile = new Empty();
                             break;
@@ -126,6 +132,7 @@ namespace sokuban.Model
 
         public void ShowPlayfield()
         {
+            
             bool isNotLastLine = true;
             int lineCounter = 1;
             Tile currentTile = map.First;

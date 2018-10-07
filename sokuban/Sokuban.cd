@@ -15,22 +15,22 @@
     </TypeIdentifier>
   </Class>
   <Class Name="sokuban.Model.Truck">
-    <Position X="16" Y="4.5" Width="1.5" />
+    <Position X="16" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Truck.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="sokuban.Game">
     <Position X="3" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAIAAAAAAAAACGAAAAAAAAAACAEAUAAABAAAAE=</HashCode>
+      <HashCode>AAAAAAAIAAAIAAABAASAACQhAAAAAAAEAUAgABAAAAE=</HashCode>
       <FileName>Controller\Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="_gameField" />
-      <Field Name="_gamefieldView" />
       <Field Name="_menuView" />
+      <Field Name="_gamefieldView" />
+      <Field Name="_gameField" />
     </ShowAsAssociation>
   </Class>
   <Class Name="sokuban.View.GamefieldView">
@@ -50,7 +50,7 @@
   <Class Name="sokuban.Model.GameField">
     <Position X="5.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEAAEAAAAEAAABAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAEBAAAEAAAAABAAAQAAEAAAAAAAAAAAAAAABAAAQ=</HashCode>
       <FileName>Model\GameField.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -64,8 +64,8 @@
       <FileName>Model\TileList.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Current" />
       <Property Name="First" />
+      <Property Name="Current" />
     </ShowAsAssociation>
   </Class>
   <Class Name="sokuban.Model.MoveableObject">
@@ -79,7 +79,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="sokuban.Model.Chest">
-    <Position X="16" Y="3" Width="1.5" />
+    <Position X="13" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Chest.cs</FileName>
@@ -102,7 +102,7 @@
   <Class Name="sokuban.Model.Destination">
     <Position X="8.5" Y="8.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Destination.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -111,6 +111,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sokuban.Model.Worker">
+    <Position X="16" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAIAAAAAAAAAIAAAAAAAEAAAAAAAAAAAAEAE=</HashCode>
+      <FileName>Model\Worker.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

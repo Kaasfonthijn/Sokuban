@@ -17,6 +17,7 @@ namespace sokuban
 
         private bool isPlaying = true;
         private GameField _gameField;
+        private int levelNumber;
         public Game()
         {
             while (true)
@@ -54,34 +55,40 @@ namespace sokuban
                         EndApplication();
                         loadGame = true;
                         break;
-                    case '1':   
+                    case '1':
+                        levelNumber = 1;
                         Console.Clear();
-                        LoadGame(1);
+                        LoadGame(levelNumber);
                         loadGame = true;
                         break;
                     case '2':
+                        levelNumber = 2;
                         Console.Clear();
-                        LoadGame(2);
+                        LoadGame(levelNumber);
                         loadGame = true;
                         break;
                     case '3':
+                        levelNumber = 3;
                         Console.Clear();
-                        LoadGame(3);
+                        LoadGame(levelNumber);
                         loadGame = true;
                         break;
                     case '4':
+                        levelNumber = 4;
                         Console.Clear();
-                        LoadGame(4);
+                        LoadGame(levelNumber);
                         loadGame = true;
                         break;
                     case '5':
+                        levelNumber = 5;
                         Console.Clear();
-                        LoadGame(5);
+                        LoadGame(levelNumber);
                         loadGame = true;
                         break;
                     case '6':
+                        levelNumber = 6;
                         Console.Clear();
-                        LoadGame(6);
+                        LoadGame(levelNumber);
                         loadGame = true;
                         break;
                     default:
@@ -103,6 +110,12 @@ namespace sokuban
                     Console.WriteLine(">     Gebruik pijljestoetsen (s = stop, r = reset)");
 
                     var input = Console.ReadKey(false).Key;
+
+                    if (_gameField.Worker != null)
+                    {
+                    _gameField.Worker.FallAsleep();
+                    }
+
                     switch (input)
                     {
                         case ConsoleKey.UpArrow:
@@ -110,14 +123,27 @@ namespace sokuban
                             break;
                         case ConsoleKey.RightArrow:
                             _gameField.Truck.Move("right");
+
                             break;
                         case ConsoleKey.DownArrow:
                             _gameField.Truck.Move("down");
+
                             break;
                         case ConsoleKey.LeftArrow:
                             _gameField.Truck.Move("left");
+
+                            break;
+                        case ConsoleKey.R:
+                            Console.Clear();
+                            LoadGame(levelNumber);
+                            break;
+                        case ConsoleKey.S:
+                            Console.Clear();
+                            StopGame();
+                            canRead = true;
                             break;
                     }
+                    
                     displayPlayfield();
 
                     if (GameEnd())
@@ -158,6 +184,12 @@ namespace sokuban
         {
             _gameField.ClearPlayfield();
             _gameField.ShowPlayfield();
+        }
+        public void StopGame() {
+            while (true) {
+                isPlaying = true;
+                StartGame();
+            }
         }
     }
 }
